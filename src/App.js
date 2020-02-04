@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import MenuComponent from './components/MenuContainer';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   return (
+      <section className="main-container">
+         <section className="hero is-primary">
+            <div className="hero-body">
+               <div className="container">
+                  <h1 className="title">Hero Title</h1>
+                  <h2 className="subtitle">A brand new website</h2>
+               </div>
+            </div>
+         </section>
+
+         <div className="container second-container">
+            <MenuComponent />
+         </div>
+      </section>
+   );
 }
 
 export default App;
