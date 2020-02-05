@@ -1,0 +1,7 @@
+.image-container {
+    height: 20em;
+}
+
+.image-container .card-image-item {
+    height: 20em !important;
+}
