@@ -17,6 +17,7 @@ function Header() {
                         <div className="navbar-menu">
                             <div className="navbar-end">
                                 <Link className="navbar-item" to="/shop">SHOP</Link>
+                                <Link className="navbar-item" to="/signIn">SIGN IN</Link>
                                 <Link className="navbar-item" to="/shop">CONTACT</Link>
                             </div>
                         </div>
