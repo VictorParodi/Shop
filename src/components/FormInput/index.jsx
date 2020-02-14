@@ -11,7 +11,6 @@ function FormInput(props) {
                 value={props.value}
                 placeholder={props.placeholder}
                 onChange={props.handleChange}
-                required
             />
         </div>
     );
