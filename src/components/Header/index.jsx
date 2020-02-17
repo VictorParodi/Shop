@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ReactComponent as Logo} from './../../assets/crown.svg';
+import {auth} from './../../firebase/firebase.utils';
 
-function Header() {
+function Header(props) {
     return (
         <section className="hero is-info is-medium">
             <div className="hero-head">
@@ -17,7 +18,16 @@ function Header() {
                         <div className="navbar-menu">
                             <div className="navbar-end">
                                 <Link className="navbar-item" to="/shop">SHOP</Link>
-                                <Link className="navbar-item" to="/signIn">SIGN IN</Link>
+                                {
+                                    props.currentUser ?
+                                    <span
+                                        onClick={() => auth.signOut()}
+                                        className="navbar-item"
+                                    >
+                                        SIGN OUT
+                                    </span>
+                                    : <Link className="navbar-item" to="/signIn">SIGN IN</Link>
+                                }
                                 <Link className="navbar-item" to="/shop">CONTACT</Link>
                             </div>
                         </div>

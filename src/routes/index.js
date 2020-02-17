@@ -15,7 +15,6 @@ class AppRouter extends React.Component {
     componentDidMount() {
         this.unsubscribeFromAuth =  auth.onAuthStateChanged((user) => {
             this.setState({currentUser: user});
-            console.log(user);
         });
     }
     
@@ -26,7 +25,7 @@ class AppRouter extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <Header />
+                <Header currentUser={this.state.currentUser}/>
                 <Switch>
                     {
                         ROUTES_CONFIG.map((route, index) => {
